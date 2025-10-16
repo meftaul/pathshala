@@ -79,7 +79,7 @@ export function ForgotPasswordForm({
           <button
             type="submit"
             disabled={isLoading || success}
-            className="btn btn-accent btn-wide w-full"
+            className="btn btn-accent btn-wide w-full rounded-lg"
           >
             {isLoading ? (
               <>

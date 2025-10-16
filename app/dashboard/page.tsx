@@ -119,7 +119,7 @@ export default function DashboardPage() {
                   তুমি "Multiplication Tables" পর্যন্ত এসেছো। চালিয়ে যাও!
                 </p>
               </div>
-              <button className="btn btn-primary btn-lg">
+              <button className="btn btn-primary btn-lg rounded-lg">
                 <Sparkles className="w-5 h-5" />
                 Continue Learning
               </button>

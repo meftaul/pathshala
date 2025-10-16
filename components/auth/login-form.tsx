@@ -104,7 +104,7 @@ export function LoginForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="btn btn-primary btn-wide w-full"
+          className="btn btn-primary btn-wide w-full rounded-lg"
         >
           {isLoading ? (
             <>
@@ -122,7 +122,7 @@ export function LoginForm({
         <button
           onClick={handleGoogleLogin}
           disabled={isLoading}
-          className="btn btn-outline btn-secondary w-full"
+          className="btn btn-outline btn-secondary w-full rounded-lg"
         >
           {isLoading ? (
             <>

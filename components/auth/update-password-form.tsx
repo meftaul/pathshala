@@ -99,7 +99,7 @@ export function UpdatePasswordForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="btn btn-success btn-wide w-full"
+          className="btn btn-success btn-wide w-full rounded-lg"
         >
           {isLoading ? (
             <>

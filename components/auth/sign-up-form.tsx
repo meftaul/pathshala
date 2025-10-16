@@ -155,7 +155,7 @@ export function SignUpForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="btn btn-secondary btn-wide w-full"
+          className="btn btn-secondary btn-wide w-full rounded-lg"
         >
           {isLoading ? (
             <>
@@ -173,7 +173,7 @@ export function SignUpForm({
         <button
           onClick={handleGoogleSignUp}
           disabled={isLoading}
-          className="btn btn-outline btn-accent w-full"
+          className="btn btn-outline btn-accent w-full rounded-lg"
         >
           {isLoading ? (
             <>

@@ -13,7 +13,7 @@ export function LogoutButton() {
   };
 
   return (
-    <button onClick={logout} className="btn-primary text-sm">
+    <button onClick={logout} className="btn btn-primary btn-sm rounded-lg w-full">
       Sign Out
     </button>
   );

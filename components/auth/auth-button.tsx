@@ -13,12 +13,12 @@ export async function AuthButton() {
 
   return user ? (
     <div className="flex items-center gap-4">
-      <Link href="/dashboard" className="btn btn-ghost btn-sm">
+      <Link href="/dashboard" className="btn btn-ghost btn-sm rounded-lg">
         <Home className="h-4 w-4" />
         Dashboard
       </Link>
       <div className="dropdown dropdown-end">
-        <div tabIndex={0} role="button" className="btn btn-ghost rounded-btn">
+        <div tabIndex={0} role="button" className="btn btn-ghost rounded-lg">
           <div className="hidden md:block">
             Hey, {(user.email as string)?.split("@")[0]}!
           </div>
@@ -59,10 +59,10 @@ export async function AuthButton() {
     </div>
   ) : (
     <div className="flex items-center gap-2">
-      <Link href="/auth/login" className="btn btn-ghost btn-sm">
+      <Link href="/auth/login" className="btn btn-ghost btn-sm rounded-lg">
         Login করো
       </Link>
-      <Link href="/auth/sign-up" className="btn btn-secondary btn-sm">
+      <Link href="/auth/sign-up" className="btn btn-secondary btn-sm rounded-lg">
         শুরু করো
       </Link>
     </div>

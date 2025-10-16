@@ -34,7 +34,7 @@ export default function Home() {
             </p>
 
             {/* CTA Button */}
-            <Link href="/auth/login" className="btn btn-primary btn-lg btn-wide text-lg shadow-lg hover:shadow-xl transition-all">
+            <Link href="/auth/login" className="btn btn-primary btn-lg btn-wide text-lg shadow-lg hover:shadow-xl transition-all rounded-lg">
               <Rocket className="w-6 h-6" />
               Login to Learn
             </Link>
@@ -102,7 +102,7 @@ export default function Home() {
           <p className="text-xl mb-8 text-base-content/70">
             শেখার জগতে স্বাগতম! এখনই শুরু করো!
           </p>
-          <Link href="/auth/login" className="btn btn-secondary btn-lg btn-wide text-lg shadow-lg">
+          <Link href="/auth/login" className="btn btn-secondary btn-lg btn-wide text-lg shadow-lg rounded-lg">
             Start Exploring
           </Link>
         </div>
