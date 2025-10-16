@@ -50,7 +50,7 @@ export function ForgotPasswordForm({
             />
             <label className="label">
               <span className="label-text-alt text-base-content/60">
-                We'll send you a password reset link
+                We&apos;ll send you a password reset link
               </span>
             </label>
           </div>

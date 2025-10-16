@@ -25,7 +25,7 @@ export function Logo({ size = "md", showIcon = true }: LogoProps) {
       className="flex items-center gap-2 hover:opacity-80 transition-opacity"
     >
       <span className={`font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent ${sizeClasses[size]}`}>
-        Bangla.AI
+        বাংলা.AI
       </span>
       {showIcon && (
         <Sparkles className={`text-accent animate-pulse ${iconSizes[size]}`} />

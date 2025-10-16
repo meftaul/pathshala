@@ -47,9 +47,9 @@ export default function DashboardPage() {
         <div className="alert bg-accent/10 border-accent/30 mb-12 shadow-lg rounded-2xl">
           <Sparkles className="w-6 h-6 text-accent" />
           <div>
-            <h3 className="font-bold text-accent">Today's Inspiration</h3>
+            <h3 className="font-bold text-accent">Today&apos;s Inspiration</h3>
             <div className="text-base-content/80">
-              "Every expert was once a beginner. Keep learning, keep growing! 🌱"
+              &quot;Every expert was once a beginner. Keep learning, keep growing! 🌱&quot;
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function DashboardPage() {
                   Continue where you left off
                 </h3>
                 <p className="text-base-content/70">
-                  তুমি "Multiplication Tables" পর্যন্ত এসেছো। চালিয়ে যাও!
+                  তুমি &quot;Multiplication Tables&quot; পর্যন্ত এসেছো। চালিয়ে যাও!
                 </p>
               </div>
               <button className="btn btn-primary btn-lg rounded-lg">
