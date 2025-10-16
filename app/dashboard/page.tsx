@@ -1,6 +1,31 @@
 import { Calculator, Atom, Trophy, TrendingUp, BookOpen, Sparkles, Target, Zap } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dashboard - Your Learning Progress",
+  description: "Access your personalized Pathshala dashboard to track your Math and Science learning progress, view achievements, and continue your educational journey with fun activities.",
+  keywords: [
+    "Student dashboard",
+    "Learning progress",
+    "Math progress tracking",
+    "Science learning dashboard",
+    "Educational achievements",
+    "Bangla education dashboard",
+    "Children learning progress",
+    "Pathshala dashboard"
+  ],
+  openGraph: {
+    title: "Pathshala Dashboard - Your Learning Progress",
+    description: "Access your personalized Pathshala dashboard to track your Math and Science learning progress, view achievements, and continue your educational journey.",
+    url: "/dashboard",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function DashboardPage() {
   return (

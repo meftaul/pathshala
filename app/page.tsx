@@ -2,6 +2,37 @@ import Link from "next/link";
 import { Atom, Calculator, FlaskConical, Sparkles, Rocket, Trophy, BookOpen } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home - Learn Math & Science in Bangla",
+  description: "Welcome to Pathshala! The best Bangla-English platform for children to learn Math and Science through fun games, interactive quizzes, and engaging activities. Start your learning journey today!",
+  keywords: [
+    "Bangla math learning",
+    "Science education Bangladesh",
+    "Children learning platform",
+    "Interactive math games",
+    "Science quizzes for kids",
+    "Bangla educational games",
+    "Math and Science learning",
+    "Online education Bangladesh",
+    "Fun learning activities",
+    "Educational platform children"
+  ],
+  openGraph: {
+    title: "Pathshala - Learn Math & Science in Bangla",
+    description: "Welcome to Pathshala! The best Bangla-English platform for children to learn Math and Science through fun games, interactive quizzes, and engaging activities.",
+    url: "/",
+    images: [
+      {
+        url: "/home-og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pathshala Home - Learn Math & Science in Bangla",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (

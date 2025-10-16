@@ -2,6 +2,30 @@ import { ForgotPasswordForm } from "@/components/auth/forgot-password-form";
 import { Unlock, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Forgot Password - Reset Your Pathshala Account",
+  description: "Reset your Pathshala password easily. Get back to your Math and Science learning journey with our secure password recovery process.",
+  keywords: [
+    "Forgot password",
+    "Password reset",
+    "Pathshala account recovery",
+    "Educational password reset",
+    "Bangla education password",
+    "Student account recovery",
+    "Math learning password"
+  ],
+  openGraph: {
+    title: "Reset Pathshala Password - Account Recovery",
+    description: "Reset your Pathshala password easily. Get back to your Math and Science learning journey with our secure password recovery process.",
+    url: "/auth/forgot-password",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function ForgotPasswordPage() {
     return (

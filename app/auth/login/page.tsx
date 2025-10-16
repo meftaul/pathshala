@@ -2,6 +2,31 @@ import { LoginForm } from "@/components/auth/login-form";
 import { Smile, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Login - Access Your Learning Dashboard",
+  description: "Login to Pathshala to access your personalized learning dashboard. Continue your Math and Science learning journey with fun games and quizzes.",
+  keywords: [
+    "Pathshala login",
+    "Student login",
+    "Bangla education login",
+    "Math learning login",
+    "Science education login",
+    "Children learning platform",
+    "Student dashboard",
+    "Educational login"
+  ],
+  openGraph: {
+    title: "Login to Pathshala - Access Your Learning Dashboard",
+    description: "Login to Pathshala to access your personalized learning dashboard. Continue your Math and Science learning journey with fun games and quizzes.",
+    url: "/auth/login",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function LoginPage() {
     return (

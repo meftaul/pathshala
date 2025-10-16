@@ -1,3 +1,27 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Error - Something Went Wrong",
+  description: "An error occurred on Pathshala. We're working to fix it. Please try again later or contact support if the problem persists.",
+  keywords: [
+    "Error page",
+    "Something went wrong",
+    "Pathshala error",
+    "Educational platform error",
+    "Bangla education error",
+    "Math learning error"
+  ],
+  openGraph: {
+    title: "Pathshala Error - Something Went Wrong",
+    description: "An error occurred on Pathshala. We're working to fix it. Please try again later or contact support if the problem persists.",
+    url: "/auth/error",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function Page({
   searchParams,
 }: {

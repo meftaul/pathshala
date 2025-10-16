@@ -1,6 +1,30 @@
 import { UpdatePasswordForm } from "@/components/auth/update-password-form";
 import { KeyRound, Sparkles } from "lucide-react";
 import { Logo } from "@/components/logo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Update Password - Secure Your Pathshala Account",
+  description: "Update your Pathshala account password to keep your learning progress safe. Create a strong password for your Math and Science learning journey.",
+  keywords: [
+    "Update password",
+    "Change password",
+    "Pathshala security",
+    "Educational account security",
+    "Bangla education password",
+    "Student account security",
+    "Math learning security"
+  ],
+  openGraph: {
+    title: "Update Pathshala Password - Account Security",
+    description: "Update your Pathshala account password to keep your learning progress safe. Create a strong password for your Math and Science learning journey.",
+    url: "/auth/update-password",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function UpdatePasswordPage() {
   return (

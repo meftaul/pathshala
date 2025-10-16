@@ -2,6 +2,31 @@ import { SignUpForm } from "@/components/auth/sign-up-form";
 import { UserPlus, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sign Up - Join Pathshala Learning Community",
+  description: "Sign up for Pathshala and start your Math and Science learning adventure! Join thousands of Bangladeshi children learning through fun games and interactive activities.",
+  keywords: [
+    "Pathshala sign up",
+    "Student registration",
+    "Bangla education signup",
+    "Math learning registration",
+    "Science education signup",
+    "Children learning platform",
+    "Educational registration",
+    "Bangla math signup"
+  ],
+  openGraph: {
+    title: "Sign Up for Pathshala - Join Learning Community",
+    description: "Sign up for Pathshala and start your Math and Science learning adventure! Join thousands of Bangladeshi children learning through fun games and interactive activities.",
+    url: "/auth/sign-up",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function SignUpPage() {
     return (
