@@ -4,8 +4,8 @@ export default function Page({
   searchParams: { error: string };
 }) {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-base-200 p-6 md:p-10">
-      <div className="card w-full max-w-sm bg-base-100 shadow-xl">
+    <div className="flex min-h-screen w-full items-center justify-center p-6 md:p-10">
+      <div className="card w-full max-w-sm shadow-xl">
         <div className="card-body">
           <h2 className="card-title text-2xl">Sorry, something went wrong.</h2>
           {searchParams?.error ? (
