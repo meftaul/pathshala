@@ -1,8 +1,12 @@
 import { Calculator, Atom, Trophy, TrendingUp, BookOpen, Sparkles, Target, Zap } from "lucide-react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function DashboardPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 p-4 md:p-8">
+    <>
+      <Header />
+      <main className="min-h-screen bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Welcome Section */}
         <section className="mb-12 text-center">
@@ -124,5 +128,7 @@ export default function DashboardPage() {
         </section>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

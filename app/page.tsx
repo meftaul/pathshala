@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { Atom, Calculator, FlaskConical, Sparkles, Rocket, Trophy, BookOpen } from "lucide-react";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+    <>
+      <Header />
+      <main className="min-h-screen bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
       {/* Hero Section */}
       <section className="hero min-h-screen">
         <div className="hero-content text-center">
@@ -104,5 +108,7 @@ export default function Home() {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 }

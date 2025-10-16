@@ -1,12 +1,18 @@
 import { LoginForm } from "@/components/auth/login-form";
 import { Smile, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 
 export default function LoginPage() {
     return (
         <main className="min-h-screen bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center p-4">
             <div className="card bg-base-100 shadow-2xl rounded-2xl max-w-md w-full">
                 <div className="card-body p-8">
+                    {/* Logo in top-right */}
+                    <div className="absolute top-4 right-4">
+                        <Logo size="sm" showIcon={false} />
+                    </div>
+
                     {/* Header with Icon */}
                     <div className="flex justify-center mb-4">
                         <div className="bg-primary/10 p-4 rounded-full">
