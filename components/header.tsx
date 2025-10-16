@@ -1,5 +1,6 @@
 import { Logo } from "./logo";
 import { AuthButton } from "./auth/auth-button";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export async function Header() {
   return (
@@ -8,8 +9,9 @@ export async function Header() {
         <Logo size="md" showIcon={true} />
       </div>
 
-      <div className="navbar-end">
+      <div className="navbar-end gap-2">
         <AuthButton />
+        <ThemeSwitcher />
       </div>
     </header>
   );
