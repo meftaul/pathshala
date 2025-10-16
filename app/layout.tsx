@@ -89,7 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fredoka.variable} antialiased`}>
+      <body className={`${fredoka.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="light"
