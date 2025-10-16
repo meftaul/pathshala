@@ -1,11 +1,29 @@
 import type { Metadata } from "next";
 import { Fredoka } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
   variable: "--font-fredoka",
+});
+
+const bangla = localFont({
+  src: [
+    {
+      path: "../public/fonts/li-abu-akkas-unicode.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/li-abu-akkas-unicode-italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-bangla",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -89,7 +107,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fredoka.variable} font-sans antialiased`}>
+      <body className={`${fredoka.variable} ${bangla.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="light"

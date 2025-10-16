@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-fredoka)", "sans-serif"],
+        sans: ["var(--font-bangla)", "var(--font-fredoka)", "sans-serif"],
+        bangla: ["var(--font-bangla)", "var(--font-fredoka)", "sans-serif"],
       },
     },
   },

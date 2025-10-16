@@ -5,5 +5,5 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-fredoka);
+  --font-sans: var(--font-bangla), var(--font-fredoka);
 }
