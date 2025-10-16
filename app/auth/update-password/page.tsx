@@ -1,12 +1,37 @@
 import { UpdatePasswordForm } from "@/components/auth/update-password-form";
+import { KeyRound, Sparkles } from "lucide-react";
 
 export default function UpdatePasswordPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-md w-full p-8 rounded shadow">
-        <h2 className="text-2xl font-bold mb-6 text-center">Update Your Password</h2>
-        <UpdatePasswordForm />
+    <main className="min-h-screen bg-gradient-to-br from-success/10 via-primary/10 to-info/10 flex items-center justify-center p-4">
+      <div className="card bg-base-100 shadow-2xl rounded-2xl max-w-md w-full">
+        <div className="card-body p-8">
+          {/* Header with Icon */}
+          <div className="flex justify-center mb-4">
+            <div className="bg-success/10 p-4 rounded-full">
+              <KeyRound className="w-12 h-12 text-success" />
+            </div>
+          </div>
+
+          {/* Title */}
+          <h2 className="text-3xl font-bold text-center mb-2 text-success">
+            নতুন Password সেট করো! 🔑
+          </h2>
+          <p className="text-center text-base-content/70 mb-6">
+            Make it strong and memorable!
+          </p>
+
+          {/* Update Password Form */}
+          <UpdatePasswordForm />
+
+          {/* Decorative Element */}
+          <div className="flex justify-center mt-6 gap-2">
+            <Sparkles className="w-4 h-4 text-success animate-pulse" />
+            <Sparkles className="w-4 h-4 text-info animate-pulse" />
+            <Sparkles className="w-4 h-4 text-success animate-pulse" />
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -46,39 +46,69 @@ export function UpdatePasswordForm({
   return (
     <div className={className} {...props}>
       <form onSubmit={handleUpdatePassword} className="space-y-4">
-        <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-            New Password
+        {/* New Password Field */}
+        <div className="form-control">
+          <label htmlFor="password" className="label">
+            <span className="label-text font-semibold">New Password</span>
           </label>
           <input
             type="password"
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            placeholder="••••••••"
+            className="input input-bordered input-success w-full"
             required
           />
+          <label className="label">
+            <span className="label-text-alt text-base-content/60">
+              কমপক্ষে ৬টা character দিতে হবে
+            </span>
+          </label>
         </div>
-        <div>
-          <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-            Confirm New Password
+
+        {/* Confirm Password Field */}
+        <div className="form-control">
+          <label htmlFor="confirmPassword" className="label">
+            <span className="label-text font-semibold">Confirm New Password</span>
           </label>
           <input
             type="password"
             id="confirmPassword"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            placeholder="••••••••"
+            className="input input-bordered input-success w-full"
             required
           />
+          <label className="label">
+            <span className="label-text-alt text-base-content/60">
+              Same password আবার দাও
+            </span>
+          </label>
         </div>
-        {error && <p className="text-sm text-red-600">{error}</p>}
+
+        {/* Error Message */}
+        {error && (
+          <div className="alert alert-error">
+            <span className="text-sm">{error}</span>
+          </div>
+        )}
+
+        {/* Submit Button */}
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50"
+          className="btn btn-success btn-wide w-full"
         >
-          {isLoading ? "Updating..." : "Update Password"}
+          {isLoading ? (
+            <>
+              <span className="loading loading-spinner"></span>
+              আপডেট হচ্ছে...
+            </>
+          ) : (
+            "Password আপডেট করো! ✨"
+          )}
         </button>
       </form>
     </div>
