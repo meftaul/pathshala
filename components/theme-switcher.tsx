@@ -1,8 +1,8 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Sun, Moon, Palette } from "lucide-react";
-
 
 const themes = [
   { name: "light", icon: Sun, label: "Light" },
@@ -19,25 +19,13 @@ const themes = [
   { name: "winter", icon: Palette, label: "Winter" },
 ] as const;
 
-type Theme = (typeof themes)[number]["name"];
-
 export function ThemeSwitcher() {
-  const [currentTheme, setCurrentTheme] = useState<Theme | null>(null);
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Get current theme from HTML element or localStorage
-    const htmlTheme = document.documentElement.getAttribute("data-theme") as Theme | null;
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
-    setCurrentTheme(htmlTheme || savedTheme);
   }, []);
-
-  const handleThemeChange = (newTheme: Theme) => {
-    setCurrentTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
 
   // Prevent hydration mismatch
   if (!mounted) {
@@ -50,8 +38,7 @@ export function ThemeSwitcher() {
     );
   }
 
-  const CurrentIcon =
-    themes.find((t) => t.name === currentTheme)?.icon || Sun;
+  const CurrentIcon = themes.find((t) => t.name === theme)?.icon || Sun;
 
   return (
     <div className="dropdown dropdown-end">
@@ -70,14 +57,14 @@ export function ThemeSwitcher() {
         {themes.map(({ name, icon: Icon, label }) => (
           <li key={name}>
             <button
-              onClick={() => handleThemeChange(name)}
+              onClick={() => setTheme(name)}
               className={`flex items-center gap-2 ${
-                currentTheme === name ? "active" : ""
+                theme === name ? "active" : ""
               }`}
             >
               <Icon className="h-4 w-4" />
               <span>{label}</span>
-              {currentTheme === name && (
+              {theme === name && (
                 <span className="ml-auto text-primary">✓</span>
               )}
             </button>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -87,8 +88,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${fredoka.variable} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${fredoka.variable} antialiased`}>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="light"
+          themes={[
+            "light",
+            "dark",
+            "bumblebee",
+            "cupcake",
+            "emerald",
+            "forest",
+            "garden",
+            "halloween",
+            "lofi",
+            "night",
+            "synthwave",
+            "winter",
+          ]}
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
