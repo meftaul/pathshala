@@ -1,8 +1,9 @@
 import { Topic, Problem, Unit } from '@/types/content';
 import { additionTopic } from '@/content/topics/arithmetic/addition';
+import { geometryTopic } from '@/content/topics/geometry/geometry';
 
 export class ContentLoader {
-  private static topics: Topic[] = [additionTopic];
+  private static topics: Topic[] = [additionTopic, geometryTopic];
 
   /**
    * Get all available topics

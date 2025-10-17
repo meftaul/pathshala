@@ -45,7 +45,10 @@ export type LessonContentBlock =
   | TextBlock
   | ImageBlock
   | ExampleBlock
-  | CounterBlock;
+  | CounterBlock
+  | AngleVisualizerBlock
+  | AngleTypeComparisonBlock
+  | ProtractorBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -79,6 +82,30 @@ export interface CounterBlock {
   maxValue: number;
   label: LocalizedText;
   showEquation?: boolean;
+}
+
+export interface AngleVisualizerBlock {
+  type: 'angle-visualizer';
+  initialAngle: number;
+  minAngle: number;
+  maxAngle: number;
+  label: LocalizedText;
+  showDegrees?: boolean;
+  showType?: boolean;
+  allowInteraction?: boolean;
+}
+
+export interface AngleTypeComparisonBlock {
+  type: 'angle-comparison';
+  title: LocalizedText;
+  description?: LocalizedText;
+}
+
+export interface ProtractorBlock {
+  type: 'protractor';
+  initialAngle?: number;
+  instruction: LocalizedText;
+  allowInteraction?: boolean;
 }
 
 export type LessonContent = LessonContentBlock[];

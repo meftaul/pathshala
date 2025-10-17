@@ -3,6 +3,9 @@
 import { LessonContent } from '@/types/content';
 import Image from 'next/image';
 import { CounterComponent } from './custom/CounterComponent';
+import { AngleVisualizerComponent } from './custom/AngleVisualizerComponent';
+import { AngleTypeComparisonComponent } from './custom/AngleTypeComparisonComponent';
+import { ProtractorComponent } from './custom/ProtractorComponent';
 
 interface LessonRendererProps {
   content: LessonContent;
@@ -107,6 +110,42 @@ export function LessonRenderer({ content, language }: LessonRendererProps) {
                 maxValue={block.maxValue}
                 label={block.label[language]}
                 showEquation={block.showEquation}
+                language={language}
+              />
+            );
+
+          case 'angle-visualizer':
+            return (
+              <AngleVisualizerComponent
+                key={index}
+                initialAngle={block.initialAngle}
+                minAngle={block.minAngle}
+                maxAngle={block.maxAngle}
+                label={block.label[language]}
+                showDegrees={block.showDegrees}
+                showType={block.showType}
+                allowInteraction={block.allowInteraction}
+                language={language}
+              />
+            );
+
+          case 'angle-comparison':
+            return (
+              <AngleTypeComparisonComponent
+                key={index}
+                title={block.title[language]}
+                description={block.description?.[language]}
+                language={language}
+              />
+            );
+
+          case 'protractor':
+            return (
+              <ProtractorComponent
+                key={index}
+                initialAngle={block.initialAngle}
+                instruction={block.instruction[language]}
+                allowInteraction={block.allowInteraction}
                 language={language}
               />
             );
