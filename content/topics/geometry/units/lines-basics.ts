@@ -1,4 +1,6 @@
 import { Unit, Lesson } from '@/types/content';
+import { linesProblemSet1 } from '@/content/problems/geometry/lines-set-1';
+import { linesProblemSet2 } from '@/content/problems/geometry/lines-set-2';
 
 const linesLesson: Lesson = {
   id: 'lesson_lines_comprehensive',
@@ -490,5 +492,5 @@ export const linesUnit: Unit = {
   },
   order: 2,
   lessons: [linesLesson],
-  problemSets: [],
+  problemSets: [linesProblemSet1, linesProblemSet2],
 };

@@ -1,4 +1,6 @@
 import { Unit, Lesson } from '@/types/content';
+import { anglesProblemSet1 } from '@/content/problems/geometry/angles-set-1';
+import { anglesProblemSet2 } from '@/content/problems/geometry/angles-set-2';
 
 const anglesLesson: Lesson = {
   id: 'lesson_angles_comprehensive',
@@ -618,5 +620,5 @@ export const anglesUnit: Unit = {
   },
   order: 1,
   lessons: [anglesLesson],
-  problemSets: [],
+  problemSets: [anglesProblemSet1, anglesProblemSet2],
 };
