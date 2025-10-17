@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Calculator, Atom, Trophy, TrendingUp, BookOpen, Sparkles, Target, Zap } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -62,7 +63,7 @@ export default function DashboardPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Math Module */}
-            <div className="card bg-base-100 shadow-lg hover:shadow-2xl hover:bg-base-200 transition-all duration-300 rounded-2xl cursor-pointer">
+            <Link href="/learn" className="card bg-base-100 shadow-lg hover:shadow-2xl hover:bg-base-200 transition-all duration-300 rounded-2xl cursor-pointer">
               <div className="card-body p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Calculator className="w-12 h-12 text-primary" />
@@ -71,11 +72,10 @@ export default function DashboardPage() {
                 <h3 className="card-title text-xl text-primary">Math</h3>
                 <p className="text-base-content/70 text-sm">গণিত</p>
                 <div className="mt-4">
-                  <progress className="progress progress-primary w-full" value="60" max="100"></progress>
-                  <p className="text-xs text-base-content/60 mt-1">60% Complete</p>
+                  <button className="btn btn-primary btn-sm w-full">Start Learning</button>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Science Module */}
             <div className="card bg-base-100 shadow-lg hover:shadow-2xl hover:bg-base-200 transition-all duration-300 rounded-2xl cursor-pointer">
@@ -138,16 +138,16 @@ export default function DashboardPage() {
               <BookOpen className="w-16 h-16 text-primary flex-shrink-0" />
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-2xl font-bold mb-2 text-primary">
-                  Continue where you left off
+                  Start Learning Math
                 </h3>
                 <p className="text-base-content/70">
-                  তুমি &quot;Multiplication Tables&quot; পর্যন্ত এসেছো। চালিয়ে যাও!
+                  Begin with Addition basics! | যোগ করা শুরু করো!
                 </p>
               </div>
-              <button className="btn btn-primary btn-lg rounded-lg">
+              <Link href="/learn/topic_addition/unit_addition_basics" className="btn btn-primary btn-lg rounded-lg">
                 <Sparkles className="w-5 h-5" />
-                Continue Learning
-              </button>
+                Start Learning
+              </Link>
             </div>
           </div>
         </section>

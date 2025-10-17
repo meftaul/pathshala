@@ -22,20 +22,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page({
+export default async function Page({
   searchParams,
 }: {
-  searchParams: { error: string };
+  searchParams: Promise<{ error: string }>;
 }) {
+  const params = await searchParams;
   return (
     <div className="flex min-h-screen w-full items-center justify-center p-6 md:p-10">
       <div className="card w-full max-w-sm shadow-xl">
         <div className="card-body">
           <h2 className="card-title text-2xl">Sorry, something went wrong.</h2>
-          {searchParams?.error ? (
+          {params?.error ? (
             <p>
               <span className="font-semibold">Code error:</span>{" "}
-              {searchParams.error}
+              {params.error}
             </p>
           ) : (
             <p>An unspecified error occurred.</p>
