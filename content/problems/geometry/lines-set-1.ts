@@ -16,6 +16,7 @@ const problem1: Problem = {
         en: 'Line segment',
         bn: 'রেখাংশ',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -23,6 +24,7 @@ const problem1: Problem = {
         en: 'Ray',
         bn: 'রশ্মি',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -30,6 +32,7 @@ const problem1: Problem = {
         en: 'Line',
         bn: 'রেখা',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -37,9 +40,9 @@ const problem1: Problem = {
         en: 'None of these',
         bn: 'এগুলির কোনটিই নয়',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'A line extends infinitely in both directions. A ray has one endpoint and extends infinitely in one direction. A segment has two endpoints.',
     bn: 'একটি রেখা উভয় দিকে অসীমভাবে প্রসারিত হয়। একটি রশ্মির একটি প্রান্তবিন্দু আছে এবং একদিকে অসীমভাবে প্রসারিত হয়। একটি রেখাংশের দুটি প্রান্তবিন্দু আছে।',
@@ -68,6 +71,8 @@ const problem1: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 2: Ray identification
@@ -86,6 +91,7 @@ const problem2: Problem = {
         en: 'Two endpoints',
         bn: 'দুটি প্রান্তবিন্দু',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -93,6 +99,7 @@ const problem2: Problem = {
         en: 'One endpoint',
         bn: 'একটি প্রান্তবিন্দু',
       },
+      isCorrect: true,
     },
     {
       id: 'c',
@@ -100,6 +107,7 @@ const problem2: Problem = {
         en: 'No endpoints',
         bn: 'কোন প্রান্তবিন্দু নেই',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -107,9 +115,9 @@ const problem2: Problem = {
         en: 'Three endpoints',
         bn: 'তিনটি প্রান্তবিন্দু',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'A ray has exactly one endpoint. It starts at a point and extends infinitely in one direction.',
     bn: 'একটি রশ্মির ঠিক একটি প্রান্তবিন্দু আছে। এটি একটি বিন্দু থেকে শুরু হয় এবং একদিকে অসীমভাবে প্রসারিত হয়।',
@@ -138,6 +146,8 @@ const problem2: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 3: Line segment property
@@ -156,6 +166,7 @@ const problem3: Problem = {
         en: 'Line',
         bn: 'রেখা',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -163,6 +174,7 @@ const problem3: Problem = {
         en: 'Ray',
         bn: 'রশ্মি',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -170,6 +182,7 @@ const problem3: Problem = {
         en: 'Line segment',
         bn: 'রেখাংশ',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -177,9 +190,9 @@ const problem3: Problem = {
         en: 'All of these',
         bn: 'এগুলির সবগুলি',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'Only a line segment can be measured for length because it has two endpoints. Lines and rays extend infinitely, so they have no measurable length.',
     bn: 'শুধুমাত্র একটি রেখাংশের দৈর্ঘ্য পরিমাপ করা যায় কারণ এর দুটি প্রান্তবিন্দু আছে। রেখা এবং রশ্মি অসীমভাবে প্রসারিত হয়, তাই তাদের কোন পরিমাপযোগ্য দৈর্ঘ্য নেই।',
@@ -208,6 +221,8 @@ const problem3: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 4: Drag-drop matching line types
@@ -283,6 +298,8 @@ const problem4: Problem = {
     },
   ],
   points: 15,
+  tags: ['line-angles'],
+  estimatedTime: 90,
 };
 
 // Problem 5: Horizontal line identification
@@ -301,6 +318,7 @@ const problem5: Problem = {
         en: 'A flagpole',
         bn: 'একটি পতাকা দণ্ড',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -308,6 +326,7 @@ const problem5: Problem = {
         en: 'The horizon',
         bn: 'দিগন্ত',
       },
+      isCorrect: true,
     },
     {
       id: 'c',
@@ -315,6 +334,7 @@ const problem5: Problem = {
         en: 'A ladder leaning against a wall',
         bn: 'দেয়ালের সাথে হেলে থাকা একটি মই',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -322,9 +342,9 @@ const problem5: Problem = {
         en: 'A door frame',
         bn: 'একটি দরজার ফ্রেম',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'The horizon runs left to right, parallel to the ground, making it a perfect example of a horizontal line.',
     bn: 'দিগন্ত বাম থেকে ডানে চলে, মাটির সমান্তরাল, এটিকে একটি অনুভূমিক রেখার একটি নিখুঁত উদাহরণ করে তোলে।',
@@ -353,6 +373,8 @@ const problem5: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 6: Vertical line identification
@@ -371,6 +393,7 @@ const problem6: Problem = {
         en: 'Left to right',
         bn: 'বাম থেকে ডানে',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -378,6 +401,7 @@ const problem6: Problem = {
         en: 'Up and down',
         bn: 'উপর এবং নিচে',
       },
+      isCorrect: true
     },
     {
       id: 'c',
@@ -385,6 +409,7 @@ const problem6: Problem = {
         en: 'At an angle',
         bn: 'একটি কোণে',
       },
+      isCorrect: false
     },
     {
       id: 'd',
@@ -392,9 +417,9 @@ const problem6: Problem = {
         en: 'In a circle',
         bn: 'একটি বৃত্তে',
       },
+      isCorrect: false
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'A vertical line runs up and down, perpendicular to the horizon. Examples include walls, flagpoles, and trees.',
     bn: 'একটি উল্লম্ব রেখা উপর এবং নিচে চলে, দিগন্তের লম্ব। উদাহরণগুলির মধ্যে রয়েছে দেয়াল, পতাকা দণ্ড এবং গাছ।',
@@ -423,6 +448,8 @@ const problem6: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 7: Parallel lines
@@ -441,6 +468,7 @@ const problem7: Problem = {
         en: 'Will eventually meet',
         bn: 'শেষ পর্যন্ত মিলিত হবে',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -448,6 +476,7 @@ const problem7: Problem = {
         en: 'Never meet',
         bn: 'কখনও মিলিত হয় না',
       },
+      isCorrect: true,
     },
     {
       id: 'c',
@@ -455,6 +484,7 @@ const problem7: Problem = {
         en: 'Always cross each other',
         bn: 'সবসময় একে অপরকে কাটে',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -462,9 +492,9 @@ const problem7: Problem = {
         en: 'Form a 90° angle',
         bn: '৯০° কোণ তৈরি করে',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'Parallel lines are always the same distance apart and never meet, no matter how far they are extended.',
     bn: 'সমান্তরাল রেখা সবসময় একই দূরত্বে থাকে এবং কখনও মিলিত হয় না, তারা যতই প্রসারিত হোক না কেন।',
@@ -493,6 +523,8 @@ const problem7: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 8: Perpendicular lines
@@ -511,6 +543,7 @@ const problem8: Problem = {
         en: 'Acute angle',
         bn: 'সূক্ষ্ম কোণ',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -518,6 +551,7 @@ const problem8: Problem = {
         en: 'Right angle (90°)',
         bn: 'সমকোণ (৯০°)',
       },
+      isCorrect: true
     },
     {
       id: 'c',
@@ -525,6 +559,7 @@ const problem8: Problem = {
         en: 'Obtuse angle',
         bn: 'স্থূল কোণ',
       },
+      isCorrect: false
     },
     {
       id: 'd',
@@ -532,9 +567,9 @@ const problem8: Problem = {
         en: 'Straight angle',
         bn: 'সরল কোণ',
       },
+      isCorrect: false
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'Perpendicular lines intersect at a right angle (90°). The corner of a book or the intersection of a wall and floor are examples.',
     bn: 'লম্ব রেখা একটি সমকোণে (৯০°) ছেদ করে। একটি বইয়ের কোণা বা একটি দেয়াল এবং মেঝের ছেদ উদাহরণ।',
@@ -563,6 +598,8 @@ const problem8: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 export const linesProblemSet1: ProblemSet = {

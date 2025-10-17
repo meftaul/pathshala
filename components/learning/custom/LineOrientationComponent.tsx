@@ -232,7 +232,7 @@ export function LineOrientationComponent({
               fontWeight="bold"
               fill={currentOrientation.color}
             >
-              m = {displayNumber(slope.toFixed(2))}
+              m = {displayNumber(parseFloat(slope.toFixed(2)))}
             </text>
           </>
         )}
@@ -373,7 +373,7 @@ export function LineOrientationComponent({
                         <p className="text-sm">
                           {language === 'en'
                             ? `Slope = rise ÷ run = ${slopeValue.toFixed(2)}`
-                            : `ঢাল = উত্থান ÷ ভ্রমণ = ${displayNumber(slopeValue.toFixed(2))}`}
+                            : `ঢাল = উত্থান ÷ ভ্রমণ = ${displayNumber(parseFloat(slopeValue.toFixed(2)))}`}
                         </p>
                       )}
                     </div>
@@ -409,7 +409,7 @@ export function LineOrientationComponent({
                       className="label-text-alt font-bold text-lg"
                       style={{ color: currentOrientation.color }}
                     >
-                      {displayNumber(slopeValue.toFixed(2))}
+                      {displayNumber(parseFloat(slopeValue.toFixed(2)))}
                     </span>
                   </label>
                   <input

@@ -16,6 +16,7 @@ const problem1: Problem = {
         en: '0',
         bn: '০',
       },
+      isCorrect: true,
     },
     {
       id: 'b',
@@ -23,6 +24,7 @@ const problem1: Problem = {
         en: '1',
         bn: '১',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -30,6 +32,7 @@ const problem1: Problem = {
         en: 'Undefined',
         bn: 'অসংজ্ঞায়িত',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -37,9 +40,9 @@ const problem1: Problem = {
         en: 'Infinity',
         bn: 'অসীম',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'a',
   explanation: {
     en: 'A horizontal line has a slope of 0 because there is no vertical change (rise = 0) as you move along the line.',
     bn: 'একটি অনুভূমিক রেখার ঢাল ০ কারণ রেখা বরাবর চলার সময় কোন উল্লম্ব পরিবর্তন নেই (উত্থান = ০)।',
@@ -68,6 +71,8 @@ const problem1: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 2: Vertical line slope
@@ -86,6 +91,7 @@ const problem2: Problem = {
         en: '0',
         bn: '০',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -93,6 +99,7 @@ const problem2: Problem = {
         en: '1',
         bn: '১',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -100,6 +107,7 @@ const problem2: Problem = {
         en: 'Undefined',
         bn: 'অসংজ্ঞায়িত',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -107,9 +115,9 @@ const problem2: Problem = {
         en: '-1',
         bn: '-১',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'A vertical line has an undefined slope because the run (horizontal change) is 0, and we cannot divide by 0.',
     bn: 'একটি উল্লম্ব রেখার ঢাল অসংজ্ঞায়িত কারণ ভ্রমণ (অনুভূমিক পরিবর্তন) ০, এবং আমরা ০ দিয়ে ভাগ করতে পারি না।',
@@ -138,6 +146,8 @@ const problem2: Problem = {
     },
   ],
   points: 10,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 3: Parallel lines and slope
@@ -156,6 +166,7 @@ const problem3: Problem = {
         en: 'Equal',
         bn: 'সমান',
       },
+      isCorrect: true,
     },
     {
       id: 'b',
@@ -163,6 +174,7 @@ const problem3: Problem = {
         en: 'Opposite',
         bn: 'বিপরীত',
       },
+      isCorrect: false
     },
     {
       id: 'c',
@@ -170,6 +182,7 @@ const problem3: Problem = {
         en: 'Negative reciprocals',
         bn: 'ঋণাত্মক বিপরীত',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -177,9 +190,9 @@ const problem3: Problem = {
         en: 'Always different',
         bn: 'সবসময় ভিন্ন',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'a',
   explanation: {
     en: 'Parallel lines have the same slope because they rise and run at the same rate. This is why they never meet.',
     bn: 'সমান্তরাল রেখার একই ঢাল থাকে কারণ তারা একই হারে উঠে এবং চলে। এই কারণেই তারা কখনও মিলিত হয় না।',
@@ -208,6 +221,8 @@ const problem3: Problem = {
     },
   ],
   points: 15,
+  tags: ['line-angles'],
+  estimatedTime: 90,
 };
 
 // Problem 4: Perpendicular lines and slope
@@ -226,6 +241,7 @@ const problem4: Problem = {
         en: 'Equal',
         bn: 'সমান',
       },
+      isCorrect: false
     },
     {
       id: 'b',
@@ -233,6 +249,7 @@ const problem4: Problem = {
         en: 'Both zero',
         bn: 'উভয়ই শূন্য',
       },
+      isCorrect: false
     },
     {
       id: 'c',
@@ -240,6 +257,7 @@ const problem4: Problem = {
         en: 'Negative reciprocals (m₁ × m₂ = -1)',
         bn: 'ঋণাত্মক বিপরীত (m₁ × m₂ = -১)',
       },
+      isCorrect: true
     },
     {
       id: 'd',
@@ -247,9 +265,9 @@ const problem4: Problem = {
         en: 'Always 1',
         bn: 'সবসময় ১',
       },
+      isCorrect: false
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'Perpendicular lines have slopes that are negative reciprocals. If one slope is m, the other is -1/m. Their product equals -1.',
     bn: 'লম্ব রেখার ঢাল ঋণাত্মক বিপরীত হয়। যদি একটি ঢাল m হয়, অন্যটি -১/m। তাদের গুণফল -১ এর সমান।',
@@ -278,6 +296,8 @@ const problem4: Problem = {
     },
   ],
   points: 15,
+  tags: ['line-angles'],
+  estimatedTime: 90,
 };
 
 // Problem 5: Calculating slope from two points
@@ -318,6 +338,8 @@ const problem5: Problem = {
     },
   ],
   points: 15,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 6: Drag-drop matching line orientations with slopes
@@ -391,6 +413,8 @@ const problem6: Problem = {
     },
   ],
   points: 20,
+  tags: ['line-angles'],
+  estimatedTime: 90,
 };
 
 // Problem 7: Intersecting lines
@@ -409,6 +433,7 @@ const problem7: Problem = {
         en: '2 angles',
         bn: '২টি কোণ',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -416,6 +441,7 @@ const problem7: Problem = {
         en: '3 angles',
         bn: '৩টি কোণ',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -423,6 +449,7 @@ const problem7: Problem = {
         en: '4 angles',
         bn: '৪টি কোণ',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -430,9 +457,9 @@ const problem7: Problem = {
         en: '6 angles',
         bn: '৬টি কোণ',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'When two lines intersect, they form 4 angles at the point of intersection. Opposite angles (called vertical angles) are equal.',
     bn: 'যখন দুটি রেখা ছেদ করে, তারা ছেদবিন্দুতে ৪টি কোণ তৈরি করে। বিপরীত কোণ (যাকে শীর্ষ কোণ বলা হয়) সমান।',
@@ -461,6 +488,8 @@ const problem7: Problem = {
     },
   ],
   points: 15,
+  tags: ['line-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 8: Real-world application
@@ -479,6 +508,7 @@ const problem8: Problem = {
         en: 'Parallel',
         bn: 'সমান্তরাল',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -486,6 +516,7 @@ const problem8: Problem = {
         en: 'Perpendicular',
         bn: 'লম্ব',
       },
+      isCorrect: true,
     },
     {
       id: 'c',
@@ -493,6 +524,7 @@ const problem8: Problem = {
         en: 'Intersecting at 45°',
         bn: '৪৫° তে ছেদ করছে',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -500,9 +532,9 @@ const problem8: Problem = {
         en: 'They do not touch',
         bn: 'তারা স্পর্শ করে না',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'The wall (vertical) and ground (horizontal) are perpendicular to each other, forming a 90° angle. This is why the corner where they meet looks like an "L".',
     bn: 'দেয়াল (উল্লম্ব) এবং মাটি (অনুভূমিক) একে অপরের লম্ব, একটি ৯০° কোণ তৈরি করে। এই কারণেই তারা যেখানে মিলিত হয় সেই কোণা "L" এর মতো দেখায়।',
@@ -531,6 +563,8 @@ const problem8: Problem = {
     },
   ],
   points: 20,
+  tags: ['line-angles'],
+  estimatedTime: 90,
 };
 
 export const linesProblemSet2: ProblemSet = {

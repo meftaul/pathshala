@@ -16,6 +16,7 @@ const problem1: Problem = {
         en: '85°',
         bn: '৮৫°',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -23,6 +24,7 @@ const problem1: Problem = {
         en: '170°',
         bn: '১৭০°',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -30,6 +32,7 @@ const problem1: Problem = {
         en: '270°',
         bn: '২৭০°',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -37,9 +40,9 @@ const problem1: Problem = {
         en: '360°',
         bn: '৩৬০°',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'A reflex angle measures greater than 180° but less than 360°. Among the options, only 270° falls in this range.',
     bn: 'একটি প্রবিষ্ট কোণের মাপ ১৮০° থেকে বেশি কিন্তু ৩৬০° থেকে কম। বিকল্পগুলির মধ্যে, শুধুমাত্র ২৭০° এই পরিসরে পড়ে।',
@@ -68,6 +71,8 @@ const problem1: Problem = {
     },
   ],
   points: 10,
+  tags: ['reflex-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 2: Full rotation angle
@@ -80,10 +85,6 @@ const problem2: Problem = {
     bn: 'একটি সম্পূর্ণ আবর্তন (সম্পূর্ণ বৃত্ত) এ কত ডিগ্রি আছে?',
   },
   correctAnswer: 360,
-  unit: {
-    en: 'degrees',
-    bn: 'ডিগ্রি',
-  },
   explanation: {
     en: 'A full rotation or complete circle measures 360°. This is why we say there are 360 degrees in a circle.',
     bn: 'একটি সম্পূর্ণ আবর্তন বা সম্পূর্ণ বৃত্তের মাপ ৩৬০°। এই কারণেই আমরা বলি একটি বৃত্তে ৩৬০ ডিগ্রি আছে।',
@@ -112,6 +113,8 @@ const problem2: Problem = {
     },
   ],
   points: 10,
+  tags: ['full-rotation'],
+  estimatedTime: 60,
 };
 
 // Problem 3: Straight angle identification
@@ -130,6 +133,7 @@ const problem3: Problem = {
         en: '90°',
         bn: '৯০°',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -137,6 +141,7 @@ const problem3: Problem = {
         en: '180°',
         bn: '১৮০°',
       },
+      isCorrect: true,
     },
     {
       id: 'c',
@@ -144,6 +149,7 @@ const problem3: Problem = {
         en: '270°',
         bn: '২৭০°',
       },
+      isCorrect: false,
     },
     {
       id: 'd',
@@ -151,9 +157,9 @@ const problem3: Problem = {
         en: '360°',
         bn: '৩৬০°',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'b',
   explanation: {
     en: 'A straight angle measures exactly 180°. It forms a straight line, which is why it\'s called a "straight" angle.',
     bn: 'একটি সরল কোণের মাপ ঠিক ১৮০°। এটি একটি সরল রেখা তৈরি করে, যে কারণে এটিকে "সরল" কোণ বলা হয়।',
@@ -182,6 +188,8 @@ const problem3: Problem = {
     },
   ],
   points: 10,
+  tags: ['straight-angles'],
+  estimatedTime: 60,  
 };
 
 // Problem 4: Complementary angles
@@ -194,10 +202,6 @@ const problem4: Problem = {
     bn: 'দুটি কোণ পরিপূরক। যদি একটি কোণের মাপ ৩৫° হয়, তাহলে অন্য কোণের মাপ কত?',
   },
   correctAnswer: 55,
-  unit: {
-    en: 'degrees',
-    bn: 'ডিগ্রি',
-  },
   explanation: {
     en: 'Complementary angles add up to 90°. If one angle is 35°, the other must be 90° - 35° = 55°.',
     bn: 'পরিপূরক কোণের সমষ্টি ৯০°। যদি একটি কোণ ৩৫° হয়, তাহলে অন্যটি অবশ্যই ৯০° - ৩৫° = ৫৫° হবে।',
@@ -226,6 +230,8 @@ const problem4: Problem = {
     },
   ],
   points: 15,
+  tags: ['complementary-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 5: Supplementary angles
@@ -238,10 +244,6 @@ const problem5: Problem = {
     bn: 'দুটি কোণ সম্পূরক। যদি একটি কোণের মাপ ১১৫° হয়, তাহলে অন্য কোণের মাপ কত?',
   },
   correctAnswer: 65,
-  unit: {
-    en: 'degrees',
-    bn: 'ডিগ্রি',
-  },
   explanation: {
     en: 'Supplementary angles add up to 180°. If one angle is 115°, the other must be 180° - 115° = 65°.',
     bn: 'সম্পূরক কোণের সমষ্টি ১৮০°। যদি একটি কোণ ১১৫° হয়, তাহলে অন্যটি অবশ্যই ১৮০° - ১১৫° = ৬৫° হবে।',
@@ -270,6 +272,8 @@ const problem5: Problem = {
     },
   ],
   points: 15,
+  tags: ['supplementary-angles'],
+  estimatedTime: 60,
 };
 
 // Problem 6: Drag-drop matching angle relationships
@@ -336,6 +340,8 @@ const problem6: Problem = {
     },
   ],
   points: 15,
+  tags: ['angle-relationships'],
+  estimatedTime: 90,
 };
 
 // Problem 7: Real-world application with reflex angles
@@ -354,6 +360,7 @@ const problem7: Problem = {
         en: 'Acute angle',
         bn: 'সূক্ষ্ম কোণ',
       },
+      isCorrect: false,
     },
     {
       id: 'b',
@@ -361,6 +368,7 @@ const problem7: Problem = {
         en: 'Obtuse angle',
         bn: 'স্থূল কোণ',
       },
+      isCorrect: false,
     },
     {
       id: 'c',
@@ -368,6 +376,7 @@ const problem7: Problem = {
         en: 'Reflex angle',
         bn: 'প্রবিষ্ট কোণ',
       },
+      isCorrect: true,
     },
     {
       id: 'd',
@@ -375,9 +384,9 @@ const problem7: Problem = {
         en: 'Right angle',
         bn: 'সমকোণ',
       },
+      isCorrect: false,
     },
   ],
-  correctAnswer: 'c',
   explanation: {
     en: 'When the door goes past the wall (more than 180° rotation), it forms a reflex angle. Reflex angles are greater than 180° but less than 360°.',
     bn: 'যখন দরজা দেয়াল অতিক্রম করে (১৮০° এর বেশি আবর্তন), এটি একটি প্রবিষ্ট কোণ তৈরি করে। প্রবিষ্ট কোণ ১৮০° এর বেশি কিন্তু ৩৬০° এর কম।',
@@ -406,6 +415,8 @@ const problem7: Problem = {
     },
   ],
   points: 20,
+  tags: ['reflex-angles', 'real-world-applications'],
+  estimatedTime: 90,
 };
 
 export const anglesProblemSet2: ProblemSet = {
