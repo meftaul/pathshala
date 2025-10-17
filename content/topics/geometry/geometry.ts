@@ -1,6 +1,7 @@
 import { Topic } from '@/types/content';
 import { anglesUnit } from './units/angles-basics';
 import { linesUnit } from './units/lines-basics';
+import { circlesUnit } from './units/circles-basics';
 
 export const geometryTopic: Topic = {
   id: 'topic_geometry',
@@ -15,7 +16,7 @@ export const geometryTopic: Topic = {
   icon: 'Triangle',
   color: 'secondary',
   prerequisites: [],
-  units: [anglesUnit, linesUnit],
+  units: [anglesUnit, linesUnit, circlesUnit],
   order: 2,
   estimatedHours: 6,
 };

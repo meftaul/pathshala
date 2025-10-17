@@ -9,6 +9,7 @@ import { ProtractorComponent } from './custom/ProtractorComponent';
 import { LineBuilderComponent } from './custom/LineBuilderComponent';
 import { LineRelationshipComponent } from './custom/LineRelationshipComponent';
 import { LineOrientationComponent } from './custom/LineOrientationComponent';
+import { CircleVisualizerComponent } from './custom/CircleVisualizerComponent';
 
 interface LessonRendererProps {
   content: LessonContent;
@@ -188,6 +189,23 @@ export function LessonRenderer({ content, language }: LessonRendererProps) {
                 showEquation={block.showEquation}
                 allowInteraction={block.allowInteraction}
                 instruction={block.instruction[language]}
+                language={language}
+              />
+            );
+
+          case 'circle':
+            return (
+              <CircleVisualizerComponent
+                key={index}
+                initialRadius={block.initialRadius}
+                minRadius={block.minRadius}
+                maxRadius={block.maxRadius}
+                showCenter={block.showCenter}
+                showRadius={block.showRadius}
+                showDiameter={block.showDiameter}
+                showCircumference={block.showCircumference}
+                allowInteraction={block.allowInteraction}
+                instruction={block.instruction?.[language]}
                 language={language}
               />
             );

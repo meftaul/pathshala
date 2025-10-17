@@ -51,7 +51,8 @@ export type LessonContentBlock =
   | ProtractorBlock
   | LineBuilderBlock
   | LineRelationshipBlock
-  | LineOrientationBlock;
+  | LineOrientationBlock
+  | CircleBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -136,6 +137,19 @@ export interface LineOrientationBlock {
   showEquation?: boolean;
   allowInteraction?: boolean;
   instruction: LocalizedText;
+}
+
+export interface CircleBlock {
+  type: 'circle';
+  initialRadius?: number;
+  minRadius?: number;
+  maxRadius?: number;
+  showCenter?: boolean;
+  showRadius?: boolean;
+  showDiameter?: boolean;
+  showCircumference?: boolean;
+  allowInteraction?: boolean;
+  instruction?: LocalizedText;
 }
 
 export type LessonContent = LessonContentBlock[];
