@@ -6,6 +6,9 @@ import { CounterComponent } from './custom/CounterComponent';
 import { AngleVisualizerComponent } from './custom/AngleVisualizerComponent';
 import { AngleTypeComparisonComponent } from './custom/AngleTypeComparisonComponent';
 import { ProtractorComponent } from './custom/ProtractorComponent';
+import { LineBuilderComponent } from './custom/LineBuilderComponent';
+import { LineRelationshipComponent } from './custom/LineRelationshipComponent';
+import { LineOrientationComponent } from './custom/LineOrientationComponent';
 
 interface LessonRendererProps {
   content: LessonContent;
@@ -146,6 +149,45 @@ export function LessonRenderer({ content, language }: LessonRendererProps) {
                 initialAngle={block.initialAngle}
                 instruction={block.instruction[language]}
                 allowInteraction={block.allowInteraction}
+                language={language}
+              />
+            );
+
+          case 'line-builder':
+            return (
+              <LineBuilderComponent
+                key={index}
+                initialType={block.initialType}
+                showGrid={block.showGrid}
+                showMeasurement={block.showMeasurement}
+                instruction={block.instruction[language]}
+                allowInteraction={block.allowInteraction}
+                language={language}
+              />
+            );
+
+          case 'line-relationship':
+            return (
+              <LineRelationshipComponent
+                key={index}
+                relationship={block.relationship}
+                allowInteraction={block.allowInteraction}
+                showAngle={block.showAngle}
+                title={block.title[language]}
+                description={block.description?.[language]}
+                language={language}
+              />
+            );
+
+          case 'line-orientation':
+            return (
+              <LineOrientationComponent
+                key={index}
+                orientation={block.orientation}
+                showSlope={block.showSlope}
+                showEquation={block.showEquation}
+                allowInteraction={block.allowInteraction}
+                instruction={block.instruction[language]}
                 language={language}
               />
             );

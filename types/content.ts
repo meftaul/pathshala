@@ -48,7 +48,10 @@ export type LessonContentBlock =
   | CounterBlock
   | AngleVisualizerBlock
   | AngleTypeComparisonBlock
-  | ProtractorBlock;
+  | ProtractorBlock
+  | LineBuilderBlock
+  | LineRelationshipBlock
+  | LineOrientationBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -106,6 +109,33 @@ export interface ProtractorBlock {
   initialAngle?: number;
   instruction: LocalizedText;
   allowInteraction?: boolean;
+}
+
+export interface LineBuilderBlock {
+  type: 'line-builder';
+  initialType: 'line' | 'ray' | 'segment';
+  showGrid?: boolean;
+  showMeasurement?: boolean;
+  instruction: LocalizedText;
+  allowInteraction?: boolean;
+}
+
+export interface LineRelationshipBlock {
+  type: 'line-relationship';
+  relationship: 'parallel' | 'perpendicular' | 'intersecting' | 'all';
+  allowInteraction?: boolean;
+  showAngle?: boolean;
+  title: LocalizedText;
+  description?: LocalizedText;
+}
+
+export interface LineOrientationBlock {
+  type: 'line-orientation';
+  orientation: 'horizontal' | 'vertical' | 'diagonal' | 'all';
+  showSlope?: boolean;
+  showEquation?: boolean;
+  allowInteraction?: boolean;
+  instruction: LocalizedText;
 }
 
 export type LessonContent = LessonContentBlock[];
