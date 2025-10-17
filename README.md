@@ -352,6 +352,4 @@ For questions or feedback, please open an issue on GitHub.
 
 **Made with ❤️ for students learning math**
 
-[⭐ Star this repo](https://github.com/yourusername/pathshala) if you find it helpful!
-
 </div>
