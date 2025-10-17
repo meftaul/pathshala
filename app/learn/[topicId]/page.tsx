@@ -62,7 +62,7 @@ export default async function TopicPage({ params }: { params: Promise<{ topicId:
                 <div className="card-body p-6">
                   <div className="flex items-start gap-4">
                     <div className="avatar placeholder">
-                      <div className="bg-primary text-primary-content rounded-full w-12">
+                      <div className="bg-primary text-primary-content rounded-full w-12 flex items-center justify-center">
                         <span className="text-2xl font-bold">{index + 1}</span>
                       </div>
                     </div>
