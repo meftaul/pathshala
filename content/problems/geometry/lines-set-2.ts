@@ -283,7 +283,7 @@ const problem4: Problem = {
 // Problem 5: Calculating slope from two points
 const problem5: Problem = {
   id: 'lines_adv_5',
-  type: 'number',
+  type: 'number-input',
   difficulty: 3,
   question: {
     en: 'A line passes through points (0, 2) and (4, 6). What is the slope? (Enter as a decimal)',

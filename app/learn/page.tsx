@@ -77,7 +77,7 @@ export default function LearnPage() {
             <div className="alert bg-accent/10 border-accent/30 inline-flex">
               <Icons.Sparkles className="w-5 h-5 text-accent" />
               <span>
-                More topics coming soon! Subtraction, Multiplication, Division & more 🎉
+                More topics coming soon! 🎉
               </span>
             </div>
           </div>

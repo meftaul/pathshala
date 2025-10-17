@@ -73,7 +73,7 @@ const problem1: Problem = {
 // Problem 2: Full rotation angle
 const problem2: Problem = {
   id: 'angles_adv_2',
-  type: 'number',
+  type: 'number-input',
   difficulty: 2,
   question: {
     en: 'How many degrees are in a full rotation (complete circle)?',
@@ -187,7 +187,7 @@ const problem3: Problem = {
 // Problem 4: Complementary angles
 const problem4: Problem = {
   id: 'angles_adv_4',
-  type: 'number',
+  type: 'number-input',
   difficulty: 3,
   question: {
     en: 'Two angles are complementary. If one angle measures 35°, what is the measure of the other angle?',
@@ -231,7 +231,7 @@ const problem4: Problem = {
 // Problem 5: Supplementary angles
 const problem5: Problem = {
   id: 'angles_adv_5',
-  type: 'number',
+  type: 'number-input',
   difficulty: 3,
   question: {
     en: 'Two angles are supplementary. If one angle measures 115°, what is the measure of the other angle?',
