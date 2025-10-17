@@ -329,48 +329,40 @@ const problem6: Problem = {
     en: 'Match each line orientation with its slope characteristic:',
     bn: 'প্রতিটি রেখার অভিমুখকে এর ঢাল বৈশিষ্ট্যের সাথে মিলাও:',
   },
-  pairs: [
+  draggables: [
+    { id: 'drag_slope_0', content: { en: 'Slope = 0', bn: 'ঢাল = ০' } },
+    { id: 'drag_slope_undef', content: { en: 'Slope = undefined', bn: 'ঢাল = অসংজ্ঞায়িত' } },
+    { id: 'drag_slope_pos', content: { en: 'Slope = positive', bn: 'ঢাল = ধনাত্মক' } },
+    { id: 'drag_slope_neg', content: { en: 'Slope = negative', bn: 'ঢাল = ঋণাত্মক' } },
+  ],
+  dropZones: [
     {
-      left: {
-        en: 'Horizontal line',
-        bn: 'অনুভূমিক রেখা',
-      },
-      right: {
-        en: 'Slope = 0',
-        bn: 'ঢাল = ০',
-      },
+      id: 'drop_horizontal',
+      label: { en: 'Horizontal line', bn: 'অনুভূমিক রেখা' },
+      accepts: ['drag_slope_0']
     },
     {
-      left: {
-        en: 'Vertical line',
-        bn: 'উল্লম্ব রেখা',
-      },
-      right: {
-        en: 'Slope = undefined',
-        bn: 'ঢাল = অসংজ্ঞায়িত',
-      },
+      id: 'drop_vertical',
+      label: { en: 'Vertical line', bn: 'উল্লম্ব রেখা' },
+      accepts: ['drag_slope_undef']
     },
     {
-      left: {
-        en: 'Diagonal line (rising left to right)',
-        bn: 'কর্ণ রেখা (বাম থেকে ডান উঠছে)',
-      },
-      right: {
-        en: 'Slope = positive',
-        bn: 'ঢাল = ধনাত্মক',
-      },
+      id: 'drop_rising',
+      label: { en: 'Diagonal line (rising left to right)', bn: 'কর্ণ রেখা (বাম থেকে ডান উঠছে)' },
+      accepts: ['drag_slope_pos']
     },
     {
-      left: {
-        en: 'Diagonal line (falling left to right)',
-        bn: 'কর্ণ রেখা (বাম থেকে ডান নামছে)',
-      },
-      right: {
-        en: 'Slope = negative',
-        bn: 'ঢাল = ঋণাত্মক',
-      },
+      id: 'drop_falling',
+      label: { en: 'Diagonal line (falling left to right)', bn: 'কর্ণ রেখা (বাম থেকে ডান নামছে)' },
+      accepts: ['drag_slope_neg']
     },
   ],
+  solution: {
+    drop_horizontal: 'drag_slope_0',
+    drop_vertical: 'drag_slope_undef',
+    drop_rising: 'drag_slope_pos',
+    drop_falling: 'drag_slope_neg',
+  },
   explanation: {
     en: 'Horizontal lines have no rise (slope=0), vertical lines have no run (undefined), upward diagonal lines have positive slope, and downward diagonal lines have negative slope.',
     bn: 'অনুভূমিক রেখার কোন উত্থান নেই (ঢাল=০), উল্লম্ব রেখার কোন ভ্রমণ নেই (অসংজ্ঞায়িত), ঊর্ধ্বমুখী কর্ণ রেখার ধনাত্মক ঢাল আছে, এবং নিম্নমুখী কর্ণ রেখার ঋণাত্মক ঢাল আছে।',

@@ -219,38 +219,42 @@ const problem4: Problem = {
     en: 'Match each line type with its description:',
     bn: 'প্রতিটি রেখার ধরনকে এর বর্ণনার সাথে মিলাও:',
   },
-  pairs: [
+  draggables: [
     {
-      left: {
-        en: 'Line',
-        bn: 'রেখা',
-      },
-      right: {
-        en: 'Extends infinitely in both directions',
-        bn: 'উভয় দিকে অসীমভাবে প্রসারিত',
-      },
+      id: 'drag_infinite_both',
+      content: { en: 'Extends infinitely in both directions', bn: 'উভয় দিকে অসীমভাবে প্রসারিত' }
     },
     {
-      left: {
-        en: 'Ray',
-        bn: 'রশ্মি',
-      },
-      right: {
-        en: 'Has one endpoint, extends infinitely one way',
-        bn: 'একটি প্রান্তবিন্দু আছে, একদিকে অসীমভাবে প্রসারিত',
-      },
+      id: 'drag_one_endpoint',
+      content: { en: 'Has one endpoint, extends infinitely one way', bn: 'একটি প্রান্তবিন্দু আছে, একদিকে অসীমভাবে প্রসারিত' }
     },
     {
-      left: {
-        en: 'Segment',
-        bn: 'রেখাংশ',
-      },
-      right: {
-        en: 'Has two endpoints, finite length',
-        bn: 'দুটি প্রান্তবিন্দু আছে, সীমিত দৈর্ঘ্য',
-      },
+      id: 'drag_two_endpoints',
+      content: { en: 'Has two endpoints, finite length', bn: 'দুটি প্রান্তবিন্দু আছে, সীমিত দৈর্ঘ্য' }
     },
   ],
+  dropZones: [
+    {
+      id: 'drop_line',
+      label: { en: 'Line', bn: 'রেখা' },
+      accepts: ['drag_infinite_both']
+    },
+    {
+      id: 'drop_ray',
+      label: { en: 'Ray', bn: 'রশ্মি' },
+      accepts: ['drag_one_endpoint']
+    },
+    {
+      id: 'drop_segment',
+      label: { en: 'Segment', bn: 'রেখাংশ' },
+      accepts: ['drag_two_endpoints']
+    },
+  ],
+  solution: {
+    drop_line: 'drag_infinite_both',
+    drop_ray: 'drag_one_endpoint',
+    drop_segment: 'drag_two_endpoints',
+  },
   explanation: {
     en: 'Each line type has unique properties: lines have no endpoints, rays have one, and segments have two.',
     bn: 'প্রতিটি রেখার ধরনের অনন্য বৈশিষ্ট্য আছে: রেখার কোন প্রান্তবিন্দু নেই, রশ্মির একটি আছে, এবং রেখাংশের দুটি আছে।',

@@ -281,38 +281,33 @@ const problem6: Problem = {
     en: 'Match each angle relationship with its sum:',
     bn: 'প্রতিটি কোণ সম্পর্ককে এর সমষ্টির সাথে মিলাও:',
   },
-  pairs: [
+  draggables: [
+    { id: 'drag_90', content: { en: '90°', bn: '৯০°' } },
+    { id: 'drag_180', content: { en: '180°', bn: '১৮০°' } },
+    { id: 'drag_360', content: { en: '360°', bn: '৩৬০°' } },
+  ],
+  dropZones: [
     {
-      left: {
-        en: 'Complementary angles',
-        bn: 'পরিপূরক কোণ',
-      },
-      right: {
-        en: '90°',
-        bn: '৯০°',
-      },
+      id: 'drop_complementary',
+      label: { en: 'Complementary angles', bn: 'পরিপূরক কোণ' },
+      accepts: ['drag_90']
     },
     {
-      left: {
-        en: 'Supplementary angles',
-        bn: 'সম্পূরক কোণ',
-      },
-      right: {
-        en: '180°',
-        bn: '১৮০°',
-      },
+      id: 'drop_supplementary',
+      label: { en: 'Supplementary angles', bn: 'সম্পূরক কোণ' },
+      accepts: ['drag_180']
     },
     {
-      left: {
-        en: 'Full rotation',
-        bn: 'সম্পূর্ণ আবর্তন',
-      },
-      right: {
-        en: '360°',
-        bn: '৩৬০°',
-      },
+      id: 'drop_full',
+      label: { en: 'Full rotation', bn: 'সম্পূর্ণ আবর্তন' },
+      accepts: ['drag_360']
     },
   ],
+  solution: {
+    drop_complementary: 'drag_90',
+    drop_supplementary: 'drag_180',
+    drop_full: 'drag_360',
+  },
   explanation: {
     en: 'Complementary angles sum to 90°, supplementary angles sum to 180°, and a full rotation is 360°.',
     bn: 'পরিপূরক কোণের সমষ্টি ৯০°, সম্পূরক কোণের সমষ্টি ১৮০°, এবং একটি সম্পূর্ণ আবর্তন ৩৬০°।',
