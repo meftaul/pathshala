@@ -44,7 +44,8 @@ export interface Lesson {
 export type LessonContentBlock =
   | TextBlock
   | ImageBlock
-  | ExampleBlock;
+  | ExampleBlock
+  | CounterBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -70,6 +71,14 @@ export interface ExampleBlock {
     step: number;
     description: LocalizedText;
   }>;
+}
+
+export interface CounterBlock {
+  type: 'counter';
+  startValue: number;
+  maxValue: number;
+  label: LocalizedText;
+  showEquation?: boolean;
 }
 
 export type LessonContent = LessonContentBlock[];

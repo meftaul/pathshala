@@ -2,6 +2,7 @@
 
 import { LessonContent } from '@/types/content';
 import Image from 'next/image';
+import { CounterComponent } from './custom/CounterComponent';
 
 interface LessonRendererProps {
   content: LessonContent;
@@ -96,6 +97,18 @@ export function LessonRenderer({ content, language }: LessonRendererProps) {
                   </div>
                 </div>
               </div>
+            );
+
+          case 'counter':
+            return (
+              <CounterComponent
+                key={index}
+                startValue={block.startValue}
+                maxValue={block.maxValue}
+                label={block.label[language]}
+                showEquation={block.showEquation}
+                language={language}
+              />
             );
 
           default:

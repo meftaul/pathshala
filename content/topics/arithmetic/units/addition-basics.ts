@@ -33,6 +33,23 @@ const introLesson: Lesson = {
       format: 'callout',
     },
     {
+      type: 'counter',
+      startValue: 0,
+      maxValue: 10,
+      label: {
+        en: 'Interactive Counter - Try adding objects!',
+        bn: 'ইন্টারেক্টিভ কাউন্টার - বস্তু যোগ করার চেষ্টা করো!',
+      },
+      showEquation: true,
+    },
+    {
+      type: 'text',
+      content: {
+        en: 'Click the + button to add objects and watch the number grow! This is just like addition.',
+        bn: '+ বাটনে ক্লিক করো বস্তু যোগ করতে এবং সংখ্যা বাড়তে দেখো! এটি যোগের মতোই।',
+      },
+    },
+    {
       type: 'example',
       title: {
         en: 'Example 1: Adding Candies',
